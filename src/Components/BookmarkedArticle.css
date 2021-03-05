@@ -1,0 +1,53 @@
+.bookmarkedArticleContainer {
+    margin-bottom: 50px;
+      float: left;
+}
+
+.bookmarkTextContainer {
+    float: left;
+    width: 80%;
+    overflow: ellipsis;
+}
+
+.bookmarkAuthor {
+    text-align: left;
+    font-size: 16px;
+    font-family: GoudyOldSty-Bol;
+    color: #d30d1d;
+}
+
+.bookmarkHeadline {
+    text-align: left;
+    font-size: 20px;
+    height: 28px;
+    margin-bottom: 17px;
+    font-family: GoudyOldSty-Bol;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.08;
+    letter-spacing: -0.1px;
+    color: #262222;
+
+}
+
+.bookmarkButtonContainer {
+    margin-top: 10px;
+    float: right;
+    width: 15%;
+}
+
+
+.removeBookmarkButton {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border-color: #d30d1d;
+    background-color: rgba(211, 13, 29, 0.05)
+}
+
+.removeBookmarkButtonIcon {
+    width: 10px;
+    height: 10px;
+    color: #d30d1d;
+}
