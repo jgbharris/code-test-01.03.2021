@@ -1,15 +1,8 @@
-.App {
-  padding-left: 0;
-  /* display:flex;
-    flex-wrap:wrap;
-    justify-content: center; */
-}
 
 .articlesList {
   float: left;
   display: flex;
   flex-wrap: wrap;
-  padding-left: 0;
   width: 75%;
   margin-left: 40.5px;
   border-right:  0.5px solid rgba(38, 34, 34, 0.1);
@@ -55,16 +48,31 @@
  .articlesList {
   order:2;
   border: none;
-  width: 100%;
   margin: auto;
+  width: 90%;
+  margin-right: 20px;
+  padding: 0;
  }
 
  .bookmarksList {
   float: none;
-  width: 100%;
-  display: inline-block;
+  width: 90%;
   order:1;
+  margin-right: 20px;
+  margin-left: 20px;
  }
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .articlesList {
+      width: 65%;
+  }
+
+  .bookmarksList {
+    width: 20%;
+  }
+
 
 }
 

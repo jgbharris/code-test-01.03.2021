@@ -63,12 +63,24 @@
     .articleCard {
         flex: 0 0 100%;
         width: 100%;
+        margin-left: 0;
     }
 
     .articleHeadline {
         margin-bottom: 50px;
     }
 
+    .articleBody {
+       margin: 0;
+    }
+
 
   }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .articleHeadline {
+        margin-bottom: 100px;
+    }
+  }
+
 
