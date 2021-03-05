@@ -13,6 +13,9 @@ function App() {
   const API_KEY = "54ac327df69d4eb49e777769fc01aae8"
 
 
+
+// Fetch data from API -----------------------------------------------------------------------------
+
   useEffect(() => {
     fetch(`https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=${API_KEY}`)
       .then((response) => response.json())
@@ -22,6 +25,8 @@ function App() {
   console.log(data)
 
   let articles = data.articles;
+
+  // Loop over data and give each an id ----------------------------------------------------------------------
 
   articles ? articles.forEach((item, i) => {
     item.id = i + 1;
@@ -33,12 +38,16 @@ function App() {
 
   let bookmarkedArticles = [...bookmarks]
 
+   // Add artcile to bookmarks, checks to see if already in array ----------------------------------------------------------------------
+
   function addBookmark(article) {
     if (bookmarkedArticles.indexOf(article) == -1) {
       bookmarkedArticles.push(article)
     }
     setBookmarks(bookmarkedArticles)
   }
+
+  // Remove article from bookmarks, filters based on id ----------------------------------------------------------------------
 
   function removeBookmark(article) {
     const articleId = article.id
