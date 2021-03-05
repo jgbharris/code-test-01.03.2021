@@ -9,7 +9,7 @@ export default function BookmarkedArticle(props) {
         <p className="bookmarkHeadline">{props.headline}</p>
       </div>
       <div className="bookmarkButtonContainer">
-        <button className="removeBookmarkButton" onClick={props.removeBookmark}><img className="removeBookmarkButtonIcon" src={cross}></img></button>
+        <button className="removeBookmarkButton" onClick={props.removeBookmark}><img alt="cross" className="removeBookmarkButtonIcon" src={cross}></img></button>
       </div>
     </div>
   );

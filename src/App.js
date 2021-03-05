@@ -9,10 +9,7 @@ function App() {
 
   const [data, setData] = useState([]);
   const [bookmarks, setBookmarks] = useState([]);
-
-  const API_KEY = "54ac327df69d4eb49e777769fc01aae8"
-
-
+  const API_KEY = "54ac327df69d4eb49e777769fc01aae8" // Would normally put in .env file but have left it in so it works straight out of the box
 
 // Fetch data from API -----------------------------------------------------------------------------
 
@@ -22,8 +19,6 @@ function App() {
       .then((data) => setData(data));
   }, []);
 
-  console.log(data)
-
   let articles = data.articles;
 
   // Loop over data and give each an id ----------------------------------------------------------------------
@@ -32,16 +27,12 @@ function App() {
     item.id = i + 1;
   }) : null
 
-  console.log("articles", articles)
-  console.log("bookmarks", bookmarks)
-
-
   let bookmarkedArticles = [...bookmarks]
 
    // Add artcile to bookmarks, checks to see if already in array ----------------------------------------------------------------------
 
   function addBookmark(article) {
-    if (bookmarkedArticles.indexOf(article) == -1) {
+    if (bookmarkedArticles.indexOf(article) === -1) {
       bookmarkedArticles.push(article)
     }
     setBookmarks(bookmarkedArticles)
@@ -58,7 +49,7 @@ function App() {
 
   return (
     <div className="App">
-      <img className="logo" src={logo}></img>
+      <img alt="logo" className="logo" src={logo}></img>
       <div className="articlesList">
         {articles ? articles.map((article, index) => (
           <Article
