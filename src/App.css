@@ -55,6 +55,8 @@
  .articlesList {
   order:2;
   border: none;
+  width: 100%;
+  margin: auto;
  }
 
  .bookmarksList {
@@ -65,3 +67,6 @@
  }
 
 }
+
+
+

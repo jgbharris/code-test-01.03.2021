@@ -62,11 +62,13 @@
 @media only screen and (max-width: 600px) {
     .articleCard {
         flex: 0 0 100%;
+        width: 100%;
     }
 
     .articleHeadline {
         margin-bottom: 50px;
     }
 
-    
+
   }
+
