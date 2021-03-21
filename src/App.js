@@ -46,13 +46,15 @@ function App() {
     setBookmarks(newList)
   }
 
+  console.log(bookmarks)
 
   return (
     <div className="App">
       <img alt="logo" className="logo" src={logo}></img>
       <div className="articlesList">
-        {articles ? articles.map((article, index) => (
+        {articles ? articles.map((article) => (
           <Article
+            key={article.id}
             addBookmark={() => addBookmark(article)}
             headline={article.title}
             author={article.author}
@@ -62,8 +64,9 @@ function App() {
       <div className="bookmarksList">
         <p className="yourBookmarks">Your bookmarks</p>
         <p className="bookMarksSubHeading">Articles you bookmark will be added to this list</p>
-        {bookmarks ? bookmarks.map((article, index) => (
+        {bookmarks ? bookmarks.map((article) => (
           <BookmarkedArticle
+            key={article.id}
             removeBookmark={() => removeBookmark(article)}
             headline={article.title}
             author={article.author} />
